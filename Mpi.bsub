@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# -o file   redirect standard output to file
+# -n #      number of processes
+# -J name   give the job a descriptive name
+
+#BSUB -o meep_output-%J.txt -n 100 -J Meep_Test
+
+openmpi_wrapper -x PATH meep-mpi DisTot.ctl
